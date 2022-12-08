@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            text-align: center;
+            background-color: #023047;
+        }
+
+        .card{
+            background-color: #219ebc;
+            width: 100px;
+            display: inline-block;
+            text-align: center;
+            padding: 10px;
+            color: white;
+            margin: 50px 0;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .greet{
+            padding: 50px;
+            background-color: #219ebc;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            color: white;
+            font-family: arial;
+            font-weight: bold;
+            font-size: 50px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DisplayDate</title>
+</head>
+<body>
+    <div class="card">
+        <p>Year: </p>
+        <p id="test"></p>
+    </div>
+    <div class="card">
+        <p>Month: </p>
+        <p id="test1"></p>
+    </div>
+    <div class="card">
+        <p>Day: </p>
+        <p id="test2"></p>
+    </div>
+    <div class="card">
+        <p>Hour: </p>
+        <p id="test3"></p>
+    </div>
+    <div class="card">
+        <p>Minutes: </p>
+        <p id="test4"></p>
+    </div>
+    <div class="card">
+        <p>Seconds: </p>
+        <p id="test5"></p>
+    </div>
+    <div class="greet">
+        <p id="greeting"></p>
+    </div>
+
+    <script>
+            const dateTime = new Date();
+            const year = dateTime.getFullYear();
+            const month = dateTime.getMonth();
+            const day = dateTime.getDay();
+            const hour = dateTime.getHours();
+            const minutes = dateTime.getMinutes();
+            const seconds = dateTime.getSeconds();
+
+            document.getElementById('test').innerHTML = year;
+            document.getElementById('test1').innerHTML = month;
+            document.getElementById('test2').innerHTML = day;
+            document.getElementById('test3').innerHTML = hour;
+            document.getElementById('test4').innerHTML = minutes;
+            document.getElementById('test5').innerHTML = seconds;
+
+            const time = new Date().getHours();
+
+            let greeting;
+            
+            if(time < 11){
+                greeting = "Good Morning";
+            }else if(time < 17){
+                greeting = "Good Afternoon"
+            }else{
+                greeting = "Good Evening"
+            }
+
+            document.getElementById("greeting").innerHTML = greeting;
+
+            var fruits = prompt("Please Input Value")
+            switch(fruits){
+                case "Cake":
+                    alert(fruits+ " Is my favorite too!")
+                    break;
+                case "Hotdog":
+                    alert(fruits+ " Is my favorite too!")
+                    break;
+                case "Egg":
+                    alert(fruits+ " Is my favorite too!")
+                    break;
+                case "Beef":
+                    alert(fruits+ " Is my favorite too!")
+                    break;
+                case "Chicken":
+                    alert(fruits+ " Is my favorite too!")
+                    break;
+                case "Adobo":
+                    alert(fruits+ " Is my favorite too!")
+                    break;
+                case "Macaroni":
+                    alert(fruits+ " Is my favorite too!")
+                    break;
+                case "Salad":
+                    alert(fruits+ " Is my favorite too!")
+                    break;
+                default:
+                    alert("Food not Found")
+            }
+
+    /*
+    
+    function displayTime(){
+            const dateTime = new Date();
+            const year = dateTime.getFullYear();
+            const month = dateTime.getMonth();
+            const day = dateTime.getDay();
+            const hour = dateTime.getHours();
+            const minutes = dateTime.getMinutes();
+            const seconds = dateTime.getSeconds();
+
+            document.getElementById('demo1').innerHTML = year;
+    }
+
+    */
+    </script>
+</body>
+</html>
